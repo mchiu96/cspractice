@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>My Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/Users/Marc_C/Desktop/index.html/css/style.css" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" />
+        <script type="text/javascript" src="/Users/Marc_C/Desktop/index.html/js/script.js"></script>
+    </head>
+    <style>
+        #self{
+            color:gold;
+            background-color: grey;
+            margin: 40px;
+        }
+
+        #edu{
+            
+            font-family: monospace;
+        }
+    </style>
+    <body>
+        <div class="jumbotron text-center">
+                <h1>Welcome to My Page</h1>
+                <p>I made this to test my skills using HTML and Javascript.</p>
+        </div>
+        <div class="jumbotron">
+            <h2 class="text-center">A Few Things about Me</h2>
+            <br>
+            <section class="img-responsive" id='carousel'>
+                <figure class="visible">
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/800px-Good_Food_Display_-_NCI_Visuals_Online.jpg' alt="Food" />
+                    <figcaption id="self">I Like Food, and Learning How to Cook</figcaption>
+                </figure>
+                <figure>
+                    <img src='http://assets-cdn.ekantipur.com/images/third-party/miscellaneous/INTERNET-ADDICTION-facebook-30032017083346-1000x0.jpg' alt="Addiction" />
+                    <figcaption id="self">I'm learning how to program</figcaption>
+                </figure>
+                <figure>
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/900px-Flag_of_Hong_Kong.svg.png' alt="Hong Kong" />
+                    <figcaption id="self">I Come from Hong Kong</figcaption>
+                </figure>
+            </section>
+        </div>
+        <div class="jumbotron">
+            <h2 id="edu">Programs I'm learning:</h2>
+            <p id="edu">Java</p>
+            <br> <p id="edu">Javascript/HTML/CSS</p>
+            <br> <p id="edu">C</p>
+            <button class="btn btn-primary"> Button</button>
+        </div>
+        <blockquote>
+                <p>Random Quote.</p>
+                <small ><a href='http://theprovince.com/feature/i-have-1605-facebook-friends-why-do-i-feel-so-alone/wcm/f8d8b05f-c2ff-41d7-881c-b5ec1b4cb869?google_editors_picks=true' target="blank">All the likes you may get cannot give you hug.</a> <cite title="Source Title">Dr. Ami Rokach</cite></small>
+        </blockquote>
+        <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Special Thanks</h3>
+                </div>
+                <div class="panel-body">
+                    My family, for encouraging me to broaden my horizons and skills. <br>
+                    edx.org for their free online course on HTML and Javascript.                
+                </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title">Contact Details</h3></div>
+                <label>Name </label>
+                <input type='text'placeholder="Name">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Phone Number">
+                <label>Email address: </label>
+                <input type="email" placeholder="Email">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Submit</button>
+            </form>
+        </div>
+        <div class="alert alert-dismissible alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4>Thank you!</h4>
+                <p>
+                Thanks for viewing my experimental page. I hope you enjoyed it!
+                </p>
+        </div>
+    </body>
+</html>
