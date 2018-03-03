@@ -1,0 +1,57 @@
+
+Excercises taken from https://www.w3resource.com/java-exercises/datatypes/index.php
+
+1. Write a Java program to convert temperature from Fahrenheit to Celsius degree 
+import java.util.scanner
+public class Ex1 {
+    public static void main(String[] str) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a degree in Fahrenheit: ");
+        double fah = input.nextDouble();
+        double  cel =(( 5 *(fah - 32.0)) / 9.0);
+        System.out.println(fah+" degrees Fahrenheit = " + cel + " degrees Celsius");
+    }
+}
+
+2. Write a Java program that reads a number in inches, converts it to meters.
+import java.util.Scanner;
+public class Ex2 {
+    public static void main(String[] str) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a value for inch: ");
+        double inch = input.nextDouble();
+        double met = inch * 0.0254;
+        System.out.println(inch + " inche(es) = " + met + " meters");
+    }
+}
+
+3. Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer. 
+import java.util.Scanner;
+public class Ex3 {
+    public static void main(String[] str) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input an integer between 0 and 1000: ");
+        int num = input.nextInt();
+        int num1 = num%10;
+        int rem = num/10;
+        int num2 = rem%10;
+        rem = rem/10;
+        int num3 = rem%10;
+        int sum=num1+num2+num3;
+        System.out.println("The sum of all digits in "+num+" is "+sum);
+    }
+}
+
+4. Write a Java program to convert minutes into a number of years and days.
+import java.util.Scanner;
+public class Ex4 {
+    public static void main(String[] str) {
+        double minInYr=60*24*365;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input the number of minutes: ");
+        double min = input.nextDouble();
+        long yr = (long) (min / minInYr);
+        int dy = (int) (min/60/24)%365;
+        System.out.println((int) min + " minutes is approximately " + yr + " years and " + dy + " days");
+    }
+}
