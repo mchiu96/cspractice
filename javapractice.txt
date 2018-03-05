@@ -120,6 +120,40 @@ public class Ex7{
 8. Write a Java program that reads a number and display the square, cube, and fourth power
 import java.util.Scanner;
 
-    
+    //I have trouble with this one
         
-        
+9. Write a Java program that accepts two integers from the user and then prints the sum, the difference, the product, the average, the distance (the difference between integer), the maximum (the larger of the two integers), the minimum (smaller of the two integers).
+
+import java.util.Scanner;
+public class Ex9{
+    public static void main(String[] str){
+        Scanner scan= new Scanner(System.in);
+        System.out.print("Input first integer: ");
+        int num1=scan.nextInt();
+        System.out.print("Input second integer: ");
+        int num2=scan.nextInt();
+        System.out.print("The sum of these integers is: "+(num1+num2)+"\n");
+        System.out.print("The difference of these integers is: "+(num1-num2)+"\n");
+        System.out.print("The product of these intergers is: "+(num1*num2)+"\n");
+        System.out.print("The average is :"+ (double)((num1+num2)/2)+"\n");
+        System.out.print("The maximum is: "+Math.max(num1,num2)+"\n");
+        System.out.print("The minimum is: "+Math.min(num1,num2)+"\n");
+    }
+}
+10. Write a Java program to break an integer into a sequence of individual digits.
+import java.util.Scanner;
+public class Ex10{
+    public static void main(String[] str){
+        Scanner scan= new Scanner(System.in);
+        System.out.print("Input six non-negative digits: ");
+        int input=scan.nextInt();
+        int num1,num2,num3,num4,num5,num6;
+        num1=input/100000%10;
+        num2=input/10000%10;
+        num3=input/1000%10;
+        num4=input/100%10;
+        num5=input/10%10;
+        num6=input%10;
+         System.out.println(num1+" "+num2+" "+num3+" "+num4+" "+num5+" "+num6);
+    }
+}
