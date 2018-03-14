@@ -453,6 +453,177 @@ System.out.println("The Sum of Natural Number upto "+n+ " terms : " +sum);
 }
 }    
         
+//Array Exercises
 
-        
+//Write a Java program to calculate the average value of array elements.        
+public class Main {
+public static void main(String[] args) {   
+ 
+       int[] num = new int[]{20, 30, 25, 85, -40, 90, -70};
+       //calculate sum of all array elements
+       int sum = 0;
+       for(int i=0; i < num.length ; i++)
+        sum = sum + num[i];
+       //calculate average value
+        double average = sum / numbers.length;
+        System.out.println("Average value of the array elements is : " + average); 
+   }
+}
+
+//Write a Java program to test if an array contains a specific value. 
+
+public class Main {
+public boolean main(int[] list, int target) {   
+    for(int i=0; i<list.length; i++){
+    	if(list[i]==item){
+	    return true;
+	}
+    }
+    return false;
+}
+
+//Write a Java program to find the index of an array element.
+public class Main {
+public int main(int[] list, int target) {   
+   if(list==null) return -1;
+   int i=0;
+   while(i<list.length){
+       if(list[i]==target){
+           return i;
+       }else i=i+1;
+   }
+   return -1;
+}
+
+//Write a Java program to remove a specific element from an array.
+public class Main {
+public static void main(int[] list, int target) {   
+   for(int i=target;i<list.length-1,i++){
+       list[i]=list[i+1];
+   }
+   list[list.length-1]=null;
+}
+
+
+//Write a Java program to insert an element (specific position) into an array.
+import java.util.Arrays; 
+public class Main{
+    public static void main(String[] args) {
+       int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
+        // Insert an element in 3rd position of the array (index->2, value->5)
+       int Index_position = 2;
+       int newValue    = 5;
+       System.out.println("Original Array : "+Arrays.toString(my_array));     
+       for(int i=my_array.length-1; i > Index_position; i--){
+    	   my_array[i] = my_array[i-1];
+       }
+   	my_array[Index_position] = newValue;
+   	System.out.println("New Array: "+Arrays.toString(my_array));
+    }
+}
+
+//Write a Java program to reverse an array of integers.
+import java.util.Arrays; 
+public class Main {
+public static void main(String[] args){   
+    int[] my_array1 = {
+            1789, 2035, 1899, 1456, 2013, 
+            1458, 2458, 1254, 1472, 2365, 
+            1456, 2165, 1457, 2456};
+  System.out.println("Original array : "+Arrays.toString(my_array1));  
+   for(int i = 0; i < my_array1.length / 2; i++)
+  {
+    int temp = my_array1[i];
+    my_array1[i] = my_array1[my_array1.length - i - 1];
+    my_array1[my_array1.length - i - 1] = temp;
+  }
+    System.out.println("Reverse array : "+Arrays.toString(my_array1));
+ }
+}
+
+//Write a Java program to find the maximum and minimum integers in an array.
+import java.util.Arrays; 
+public class Main {
+  static int max;
+  static int min;
+    public static void max_min(int my_array[]) {
+        max = my_array[0];
+        min = my_array[0];
+        int len = my_array.length;
+        for (int i = 1; i < len - 1; i = i + 2) {
+            if (i + 1 > len) {
+                if (my_array[i] > max) max = my_array[i];
+                if (my_array[i] < min) min = my_array[i];
+            }
+            if (my_array[i] > my_array[i + 1]) {
+                if (my_array[i] > max) max = my_array[i];
+                if (my_array[i + 1] < min) min = my_array[i + 1];
+            }
+            if (my_array[i] < my_array[i + 1]) {
+                if (my_array[i] < min) min = my_array[i];
+                if (my_array[i + 1] > max) max = my_array[i + 1];
+            }
+        }
+    }
+    public static void main(String[] args) {
+           int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
+        max_min(my_array);
+        System.out.println(" Original Array: "+Arrays.toString(my_array));
+        System.out.println(" Maximum value for the above array = " + max);
+        System.out.println(" Minimum value for the above array = " + min);
+    }
+}
+
+//Write a Java program to find the duplicate values of an array of integer values
+import java.util.Arays;
+public class Main{
+    public static void main(String[] args) {
+        int[] my_array = {1, 2, 5, 5, 6, 6, 7, 2};
+ 
+        for (int i = 0; i < my_array.length-1; i++){
+            for (int j = i+1; j < my_array.length; j++){
+                if ((my_array[i] == my_array[j]) && (i != j)){
+                    System.out.println("Duplicate Element : "+my_array[j]);
+                }
+            }
+        }
+    }    
+ }
+
+//Write a Java program to find the duplicate values of an array of string values
+import java.util.Arays;
+public class Main{
+    public static void main(String str[]) {
+    	for (int i=0;i<str.length;i++){
+	    for(int j=i+1;j<str.length;j++){
+	        if(str[i].equalsstr[j] && i!=j){
+		    System.out.println("Duplicate Element is : "+str[j]);
+		}
+            }
+	}
+    }
+}
+
+//Write a Java program to find the common elements between two arrays (string values).
+import java.util.Arays;
+public class Main{
+    public static void main(String str1[], String str2[]) {
+    	for (int i=0;i<str1.length;i++){
+	    for(int j=0;j<str2.length;j++){
+	        if(str1[i].equals str2[j]){
+		    System.out.println("Common Element is : "+str[j]);
+		}
+            }
+	}
+    }
+}
+    
+//Write a Java program to find the common elements between two arrays of integers
+iimport java.util.Arays;
+public class Main{
+    public static void main(int num1[],int num2[]){
+    	for(int i=0;i<num1.length;i++){
+	    for(int j=0;j<num2.length;j++){
+	        if(num1[i]==num2[j]){
+		    System.out.println("Common 
 
