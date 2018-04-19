@@ -627,3 +627,98 @@ public class Main{
 	        if(num1[i]==num2[j]){
 		    System.out.println("Common 
 
+
+Write a Java method to find the smallest number among three numbers
+
+import java.util.Scanner;
+public class Ex {
+  public static void main(String[] args) {
+  Scanner in=new Scanner (System.in);
+  System.out.print("Input the first number: ");
+  double d1= in.nextDouble();
+  System.out.print("Input the second number: ");
+  double d2= in.nextDouble();
+  System.out.print("Input the third number: ");
+  double d3= in.nextDouble();
+  System.out.print("The smallest number is "+ smallest(d1,d2,d3));
+ }
+ 
+ public static double smallest(double x, double y, double z){
+   return Math.min(Math.min(x,y),z);
+ }
+}
+
+Write a Java method to compute the average of three numbers.
+
+import java.util.Scanner;
+public class Ex {
+  public static void main(String[] args) {
+  Scanner in=new Scanner (System.in);
+  System.out.print("Input the first number: ");
+  double d1= in.nextDouble();
+  System.out.print("Input the second number: ");
+  double d2= in.nextDouble();
+  System.out.print("Input the third number: ");
+  double d3= in.nextDouble();
+  System.out.print("The average of these 3 numbers is "+ average(d1,d2,d3));
+ }
+ 
+ public static double average(double x, double y, double z){
+   return (x+y+z)/3;
+ }
+}
+
+
+Write a Java method to display the middle character of a string. 
+Note: a) If the length of the string is odd there will be two middle characters.
+b) If the length of the string is even there will be one middle character.
+
+import java.util.Scanner;
+public class Ex {
+  
+  public static void main(String[] args) {
+  Scanner in=new Scanner (System.in);
+  System.out.print("Input string: ");
+  String str=in.nextLine();
+  System.out.print("The middle character is "+ middle(str));
+ }
+ 
+ public static String middle(String str){
+   int pos;
+   int len;
+   if(str.length() % 2 == 0){
+     pos=str.length()/2 - 1;
+     len=2;
+   }else{
+     pos=str.length()/2;
+     len=1;
+   }
+   return str.substring(pos,pos+len);
+ }
+}
+
+Write a Java method to count all vowels in a string
+import java.util.Scanner;
+public class Ex {
+  
+  public static void main(String[] args) {
+  Scanner in=new Scanner (System.in);
+  System.out.print("Input string: ");
+  String str=in.nextLine();
+  System.out.print("The number of vowels in this string is "+ count_vowel(str));
+ }
+ 
+ public static int count_vowel(String str){
+   int count=0;
+   for(int i=0; i<str.length();i++){
+     if(str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i' || str.charAt(i)=='o' || str.charAt(i)=='u'){
+       count++;
+     }
+   }
+   return count;
+ }
+}
+
+
+
+
