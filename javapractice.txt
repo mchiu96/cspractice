@@ -719,6 +719,69 @@ public class Ex {
  }
 }
 
+Write a Java method to compute the future investment value at a given interest rate for a specified number of years.
+import java.util.Scanner;
+public class Ex {
+    public static void main(String[] args) {
+  	Scanner in = new Scanner(System.in); 
+    	System.out.print("Input the investment amount: ");
+ 	double investment = in.nextDouble();
+ 	System.out.print("Input the rate of interest: ");
+	double rate = in.nextDouble();
+	System.out.print("Input number of years: ");
+	int year = in.nextInt();
+	System.out.print("Years     Amount"+"\n");
+	for(int i=0;i<years;i++){
+	    investment=compound(investment, rate);
+	    System.out.print("    "+ investment +"\n");
+	}
+    }
+    public static double compound(double investment, double rate){
+    	double prime=investment;
+	for(int i=0;i<12;i++){
+	    prime+=((prime*(rate/100))/12);
+	}
+	return prime;
+    }
+}
 
+Write a Java method to print characters between two characters (i.e. A to P ).
+import java.util.Scanner;
+public class Ex {
+	   public static void main(String[] args) {
+        print_Chars('(', 'z', 20);
+    }
+ public static void print_Chars(char char1, char char2, int n) {
+        for (int ctr = 1; char1 <= char2; ctr++, char1++) {
+            System.out.print(char1 + " ");
+            if (ctr % n == 0) System.out.println("");
+        }
+		System.out.print("\n");
+    }
+}
 
+Write a Java method to check whether a year (integer) entered by the user is a leap year or not
+
+import java.util.Scanner;
+public class Ex {
+	public class Exercise10 {
+ 
+ public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input a year: ");
+        int year = in.nextInt();
+
+        System.out.println(is_LeapYear(year));
+    }
+ 
+ public static boolean is_LeapYear(int y)
+    {
+        boolean a = (y % 4) == 0;
+        boolean b = (y % 100) != 0;
+        boolean c = ((y % 100 == 0) && (y % 400 == 0));
+
+        return a && (b || c);
+    }
+}
 
