@@ -721,29 +721,32 @@ public class Ex {
 
 Write a Java method to compute the future investment value at a given interest rate for a specified number of years.
 import java.util.Scanner;
-public class Ex {
-    public static void main(String[] args) {
+public class Ex{
+  public static void main(String[] args) {
   	Scanner in = new Scanner(System.in); 
-    	System.out.print("Input the investment amount: ");
- 	double investment = in.nextDouble();
- 	System.out.print("Input the rate of interest: ");
-	double rate = in.nextDouble();
-	System.out.print("Input number of years: ");
-	int year = in.nextInt();
-	System.out.print("Years     Amount"+"\n");
-	for(int i=0;i<years;i++){
+    System.out.print("Input the investment amount: ");
+ 	  double investment = in.nextDouble();
+ 	  System.out.print("Input the rate of interest: ");
+	  double rate = in.nextDouble();
+	  System.out.print("Input number of years: ");
+	  int year = in.nextInt();
+	  System.out.print("Years     Amount"+"\n");
+	  for(int i=0; i<year;i++){
 	    investment=compound(investment, rate);
-	    System.out.print("    "+ investment +"\n");
-	}
+	    System.out.print(" "+(i+1)+"     " + investment +"\n");
     }
-    public static double compound(double investment, double rate){
-    	double prime=investment;
-	for(int i=0;i<12;i++){
+  }
+  public static double compound(double investment,double rate){
+    double prime=investment;
+	  for(int i=0;i<12;i++){
 	    prime+=((prime*(rate/100))/12);
-	}
-	return prime;
-    }
+	  }
+	  return prime;
+  }
 }
+
+  
+  
 
 Write a Java method to print characters between two characters (i.e. A to P ).
 import java.util.Scanner;
